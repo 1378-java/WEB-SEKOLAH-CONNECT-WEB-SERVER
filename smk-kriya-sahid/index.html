@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMK Kriya Sahid Sukoharjo | Sekolah Seni Berbasis Teknologi</title>
+  <meta name="description" content="Website resmi SMK Kriya Sahid Sukoharjo - Sekolah Berbasis Seni Kreatif dan Teknologi." />
+  <meta name="author" content="ARGA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo"><img src="img/logo.png" alt="Logo"></div>
+    <div class="preloader-bar"><span></span></div>
+    <p class="preloader-text">SMK Kriya Sahid</p>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce-bar">
+    <span class="marquee">🎓 Pendaftaran Siswa Baru Tahun Ajaran 2026/2027 telah dibuka! &nbsp;•&nbsp; 4 Jurusan Unggulan &nbsp;•&nbsp; <a href="#daftar">Daftar Sekarang</a> &nbsp;•&nbsp; Sekolah Seni Berbasis Teknologi</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="logo-link">
+        <img src="img/logo.png" alt="Logo SMK Kriya Sahid" class="logo-img">
+        <div class="logo-text">
+          <div class="logo-title">SMK Kriya Sahid</div>
+          <div class="logo-subtitle">Sukoharjo</div>
+        </div>
+      </a>
+      <div class="desktop-menu">
+        <a href="#beranda" class="nav-link">Beranda</a>
+        <a href="#jurusan" class="nav-link">Jurusan</a>
+        <a href="#prestasi" class="nav-link">Prestasi</a>
+        <a href="#fasilitas" class="nav-link">Fasilitas</a>
+        <a href="#galeri" class="nav-link">Galeri</a>
+        <a href="#sejarah" class="nav-link">Sejarah</a>
+        <a href="#komentar" class="nav-link">Komentar</a>
+        <a href="#daftar" class="btn-daftar">Daftar Siswa</a>
+        <span id="authArea" style="display:flex;align-items:center;gap:0.4rem;margin-left:0.35rem;">
+          <button type="button" class="nav-link" id="btnLoginOpen" style="background:rgba(255,255,255,0.12);border:none;cursor:pointer;">Login</button>
+        </span>
+        <button class="theme-btn" id="themeBtnDesktop" aria-label="Ganti Mode" title="Mode Gelap / Terang" style="margin-left:0.5rem;">
+          <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+      <button class="theme-btn" id="themeBtn" aria-label="Ganti Mode Gelap/Terang" title="Mode Gelap / Terang">
+        <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <img src="img/logo.png" alt="Logo" class="logo-img" style="width:40px;height:40px;">
+        <div>
+          <div class="logo-title" style="color:white;font-size:0.9rem;">SMK Kriya Sahid</div>
+          <div class="logo-subtitle">Sukoharjo</div>
+        </div>
+      </div>
+      <button class="sidebar-close" id="closeSidebar">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#beranda" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Beranda
+      </a>
+      <a href="#jurusan" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747S22 23 22 17c0-6.002-4.5-10.747-10-10.747z"/></svg>
+        Program Keahlian
+      </a>
+      <a href="#prestasi" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        Prestasi
+      </a>
+      <a href="#fasilitas" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        Fasilitas
+      </a>
+      <a href="#video" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Video Profil
+      </a>
+      <a href="#testimoni" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        Testimoni
+      </a>
+      <a href="#galeri" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Galeri
+      </a>
+      <a href="#sejarah" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Sejarah
+      </a>
+      <a href="#lokasi" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Lokasi
+      </a>
+      <a href="#komentar" class="sidebar-link">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        Komentar
+      </a>
+      <a href="#daftar" class="sidebar-link" style="background:rgba(251,191,36,0.15);color:#fbbf24;margin-top:0.5rem;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+        Daftar Sekarang
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Hubungi Kami</p>
+      <p class="phone">0271-590483</p>
+      <p class="email">smkkriyasahidsukoharjo@gmail.com</p>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section id="beranda" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span id="typingText" class="typing-cursor"></span></div>
+      <h1>SMK Kriya Sahid<br><span class="gradient-text">Sukoharjo</span></h1>
+      <p class="hero-desc">
+        Mencetak generasi terampil, mandiri, dan berkompetensi unggul di bidang 
+        <span class="wiki-tooltip">seni kreatif<span class="tooltip-content">Bidang keahlian yang menggabungkan kreativitas seni dengan keterampilan praktis seperti kriya kayu, batik, dan desain.</span></span> 
+        dan teknologi informasi.
+      </p>
+      <div class="hero-buttons">
+        <a href="#jurusan" class="btn-primary">Lihat Jurusan</a>
+        <a href="#daftar" class="btn-secondary">Daftar Sekarang</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <svg width="24" height="24" fill="none" stroke="rgba(255,255,255,0.7)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+
+  <!-- STATISTIK -->
+  <div class="container">
+    <div class="stats-bar fade-in" id="statsBar">
+      <div class="stat-card"><div class="num" data-target="4" data-suffix="">0</div><div class="label">Program Keahlian</div></div>
+      <div class="stat-card"><div class="num">B</div><div class="label">Akreditasi</div></div>
+      <div class="stat-card"><div class="num" data-target="2003" data-suffix="">0</div><div class="label">Tahun Berdiri</div></div>
+      <div class="stat-card"><div class="num">ISO</div><div class="label">9001:2008</div></div>
+    </div>
+  </div>
+
+  <!-- JURUSAN -->
+  <section id="jurusan" class="section bg-white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Program Keahlian</span>
+        <h2 class="section-title">4 Jurusan Unggulan</h2>
+        <p class="section-desc">Pilih jurusan sesuai minat dan bakatmu. Klik "Lihat Detail" untuk info lebih lengkap.</p>
+      </div>
+      <div class="jurusan-grid">
+        <div class="jurusan-card fade-in">
+          <div class="jurusan-icon icon-kayu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+          <div class="jurusan-body">
+            <h3>Kriya Kreatif Kayu & Rotan</h3>
+            <p>Teknik ukir, mesin, finishing, dan desain produk furniture berkualitas industri.</p>
+            <div class="tags"><span class="tag tag-kayu">Ukir</span><span class="tag tag-kayu">Furniture</span><span class="tag tag-kayu">Finishing</span></div>
+            <a href="#" class="btn-detail" data-jurusan="kayu">Lihat Detail →</a>
+          </div>
+        </div>
+        <div class="jurusan-card fade-in">
+          <div class="jurusan-icon icon-batik"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg></div>
+          <div class="jurusan-body">
+            <h3>Kriya Kreatif Batik & Tekstil</h3>
+            <p>Membatik, desain motif, pewarnaan, hingga produksi busana dan produk tekstil.</p>
+            <div class="tags"><span class="tag tag-batik">Batik</span><span class="tag tag-batik">Desain</span><span class="tag tag-batik">Tekstil</span></div>
+            <a href="#" class="btn-detail" data-jurusan="batik">Lihat Detail →</a>
+          </div>
+        </div>
+        <div class="jurusan-card fade-in">
+          <div class="jurusan-icon icon-multimedia"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.868v6.264a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div>
+          <div class="jurusan-body">
+            <h3>Multimedia / DKV</h3>
+            <p>Desain grafis, fotografi, videografi, dan produksi konten digital kreatif.</p>
+            <div class="tags"><span class="tag tag-multi">Desain</span><span class="tag tag-multi">Video</span><span class="tag tag-multi">Konten</span></div>
+            <a href="#" class="btn-detail" data-jurusan="multi">Lihat Detail →</a>
+          </div>
+        </div>
+        <div class="jurusan-card fade-in">
+          <div class="jurusan-icon icon-tkj"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></div>
+          <div class="jurusan-body">
+            <h3>Teknik Komputer & Jaringan</h3>
+            <p>Perakitan PC, jaringan, administrasi server, dan teknologi WAN.</p>
+            <div class="tags"><span class="tag tag-tkj">Jaringan</span><span class="tag tag-tkj">Server</span><span class="tag tag-tkj">Hardware</span></div>
+            <a href="#" class="btn-detail" data-jurusan="tkj">Lihat Detail →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESTASI -->
+  <section id="prestasi" class="section bg-gray">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Pencapaian</span>
+        <h2 class="section-title">Prestasi Sekolah</h2>
+        <p class="section-desc">Beberapa pencapaian yang membanggakan dari siswa dan sekolah.</p>
+      </div>
+      <div class="prestasi-grid">
+        <div class="prestasi-card fade-in">
+          <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></div>
+          <h3>Juara I LKS Nasional</h3>
+          <p>Meraih Juara I Lomba Kompetensi Siswa Tingkat Nasional di bidang Kriya (2006) dan mempertahankan prestasi di tingkat Provinsi.</p>
+        </div>
+        <div class="prestasi-card fade-in">
+          <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+          <h3>Lulus 100%</h3>
+          <p>Angkatan XXI berhasil lulus 100% dengan kualitas yang diakui Dunia Usaha dan Dunia Industri (DUDI).</p>
+        </div>
+        <div class="prestasi-card fade-in">
+          <div class="icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <h3>Tinggi Penyerapan Kerja</h3>
+          <p>Sebagian besar lulusan langsung bekerja di industri furniture, tekstil, multimedia, dan IT di Solo Raya dan sekitarnya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASILITAS -->
+  <section id="fasilitas" class="section bg-white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Sarana & Prasarana</span>
+        <h2 class="section-title">Fasilitas Sekolah</h2>
+        <p class="section-desc">Didukung fasilitas lengkap untuk menunjang pembelajaran praktik.</p>
+      </div>
+      <div class="fasilitas-grid">
+        <div class="fasilitas-card fade-in">
+          <div class="fasilitas-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+          <div class="fasilitas-body"><h3>Bengkel Kriya Kayu</h3><p>Peralatan mesin & ukir lengkap untuk praktik furniture.</p></div>
+        </div>
+        <div class="fasilitas-card fade-in">
+          <div class="fasilitas-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4z"/></svg></div>
+          <div class="fasilitas-body"><h3>Lab Batik & Tekstil</h3><p>Ruang praktik membatik dan produksi tekstil kreatif.</p></div>
+        </div>
+        <div class="fasilitas-card fade-in">
+          <div class="fasilitas-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div class="fasilitas-body"><h3>Lab Komputer & Multimedia</h3><p>Komputer dengan software desain & editing profesional.</p></div>
+        </div>
+        <div class="fasilitas-card fade-in">
+          <div class="fasilitas-img"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+          <div class="fasilitas-body"><h3>Gedung & Area Praktikum</h3><p>Gedung berkonsep etnik seni dengan taman & gazebo kreatif.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="section bg-gray">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Profil</span>
+        <h2 class="section-title">Video Profil Sekolah</h2>
+        <p class="section-desc">Kenali lebih dekat SMK Kriya Sahid Sukoharjo melalui video resmi.</p>
+      </div>
+      <div class="video-wrapper fade-in">
+        <iframe src="https://www.youtube.com/embed/kCp8ygyPToM" title="Company Profile SMK Kriya Sahid Sukoharjo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section id="testimoni" class="section bg-white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Kata Mereka</span>
+        <h2 class="section-title">Testimoni</h2>
+        <p class="section-desc">Pengalaman siswa dan alumni selama bersekolah di SMK Kriya Sahid.</p>
+      </div>
+      <div class="testimoni-grid">
+        <div class="testimoni-card fade-in">
+          <p class="quote">"Belajar di jurusan Kriya Kayu sangat menyenangkan. Saya bisa langsung praktik membuat produk yang bisa dijual."</p>
+          <div class="author">
+            <div class="avatar">R</div>
+            <div><div class="name">Rizki Alumni</div><div class="role">Kriya Kayu - Angkatan XX</div></div>
+          </div>
+        </div>
+        <div class="testimoni-card fade-in">
+          <p class="quote">"Guru-gurunya supportif dan fasilitas lab multimedia lengkap. Saya jadi lebih percaya diri di dunia desain."</p>
+          <div class="author">
+            <div class="avatar">S</div>
+            <div><div class="name">Sinta</div><div class="role">Multimedia - Siswa Aktif</div></div>
+          </div>
+        </div>
+        <div class="testimoni-card fade-in">
+          <p class="quote">"Setelah lulus langsung dapat kerja di bidang jaringan. Ilmu yang didapat sangat aplikatif di dunia kerja."</p>
+          <div class="author">
+            <div class="avatar">A</div>
+            <div><div class="name">Andi</div><div class="role">TKJ - Alumni</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEJARAH -->
+  <section id="sejarah" class="section bg-gray">
+    <div class="container">
+      <div class="sejarah-grid">
+        <div class="sejarah-content fade-in">
+          <span class="section-badge">Tentang Kami</span>
+          <h2 class="section-title" style="text-align:left;margin-bottom:1.5rem;">Sejarah & Latar Belakang</h2>
+          <p>
+            <strong>SMK Kriya Sahid Sukoharjo</strong> didirikan pada tahun 
+            <span class="wiki-tooltip">2003<span class="tooltip-content">Tanggal operasional resmi: 1 Mei 2003. Didirikan oleh Prof. Dr. H. Sukamdani Sahid Gitosardjono.</span></span> 
+            oleh 
+            <span class="wiki-tooltip">Prof. Dr. H. Sukamdani Sahid Gitosardjono<span class="tooltip-content">Pendiri Yayasan Sahid Jaya. Tokoh pengusaha dan pendidik yang berkontribusi besar di bidang pendidikan vokasi.</span></span>.
+          </p>
+          <p>Sebagai satu-satunya SMK berbasis seni kreatif dan teknologi di Kabupaten Sukoharjo, sekolah ini berkomitmen mencetak lulusan yang terampil, mandiri, berbudaya, dan religius.</p>
+          <p>Keunggulan sekolah terbukti dengan berbagai prestasi LKS Nasional dan tingkat penyerapan kerja lulusan yang tinggi di DUDI.</p>
+          <div class="stats-grid">
+            <div class="stat-box"><div class="stat-value">B</div><div class="stat-label">Akreditasi</div></div>
+            <div class="stat-box"><div class="stat-value">4</div><div class="stat-label">Jurusan</div></div>
+            <div class="stat-box"><div class="stat-value">2003</div><div class="stat-label">Berdiri</div></div>
+            <div class="stat-box"><div class="stat-value">ISO</div><div class="stat-label">9001:2008</div></div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="visi-card">
+            <h3>Visi Sekolah</h3>
+            <p>Menjadi SMK unggulan berbasis seni kreatif dan teknologi yang menghasilkan lulusan kompeten, berkarakter, dan siap bersaing di tingkat nasional maupun global.</p>
+            <h3>Moto</h3>
+            <p class="visi-moto">"Sekolah Seni Berbasis Teknologi"</p>
+            <div class="visi-alamat">
+              <p class="label">Alamat</p>
+              <p>Jl. Veteran No. 82B, Jetis<br>Kec. Sukoharjo, Kab. Sukoharjo<br>Jawa Tengah 57511</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERI -->
+  <section id="galeri" class="section bg-white">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Dokumentasi</span>
+        <h2 class="section-title">Galeri Kegiatan</h2>
+        <p class="section-desc">Klik foto untuk memperbesar (lightbox).</p>
+      </div>
+      <div class="galeri-grid">
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=85" alt="Praktik" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=85" alt="Kegiatan" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=85" alt="Workshop" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=85" alt="Teknologi" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=85" alt="Kelompok" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=85" alt="Presentasi" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=85" alt="Kolaborasi" loading="lazy"></div>
+        <div class="galeri-item fade-in"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=85" alt="Tim" loading="lazy"></div>
+      </div>
+      <p class="galeri-note">* Ganti dengan foto asli kegiatan sekolah di folder img/</p>
+    </div>
+  </section>
+
+  <!-- LOKASI / MAPS -->
+  <section id="lokasi" class="section bg-gray">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Lokasi</span>
+        <h2 class="section-title">Temukan Kami</h2>
+        <p class="section-desc">Jl. Veteran No. 82B, Jetis, Kec. Sukoharjo, Kab. Sukoharjo, Jawa Tengah</p>
+      </div>
+      <div class="map-wrapper fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8!2d110.8314!3d-7.6817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDAnNTQuMSJTIDExMMKwNDknNTMuMCJF!5e0!3m2!1sid!2sid!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi SMK Kriya Sahid Sukoharjo"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- KOMENTAR -->
+  <section id="komentar" class="section bg-gray">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge">Diskusi</span>
+        <h2 class="section-title">Komentar & Testimoni</h2>
+        <p class="section-desc">Login dulu untuk menulis komentar. Baca pengalaman siswa & alumni.</p>
+      </div>
+
+      <div class="form-card fade-in" style="max-width:720px;margin:0 auto 2rem;">
+        <div id="commentLoginHint" style="text-align:center;padding:1rem 0;">
+          <p style="color:var(--text-muted);margin-bottom:1rem;">Kamu harus login untuk berkomentar.</p>
+          <button type="button" class="btn-submit" id="btnLoginFromComment" style="max-width:220px;margin:0 auto;">Login / Daftar Akun</button>
+        </div>
+        <form id="commentForm" style="display:none;">
+          <div class="form-group form-full">
+            <label>Tulis komentar sebagai <strong id="commentUserName"></strong></label>
+            <textarea id="commentIsi" name="isi" rows="3" required placeholder="Bagikan pendapat atau pengalamanmu..." maxlength="1000"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Kirim Komentar</button>
+        </form>
+      </div>
+
+      <div id="commentsList" class="testimoni-grid fade-in">
+        <p style="grid-column:1/-1;text-align:center;color:var(--text-soft);">Memuat komentar...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM DAFTAR -->
+  <section id="daftar" class="daftar-section">
+    <div class="container">
+      <div class="daftar-header fade-in">
+        <span class="section-badge">Pendaftaran</span>
+        <h2 class="section-title">Formulir Pendaftaran</h2>
+        <p class="section-desc">Isi data di bawah ini. Data akan langsung dikirim ke email admin.</p>
+      </div>
+      <form id="daftarForm" class="form-card fade-in" action="https://formsubmit.co/arganova.id@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Pendaftaran Baru - SMK Kriya Sahid Sukoharjo">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="form-grid">
+          <div class="form-group form-full">
+            <label>Nama Lengkap *</label>
+            <input type="text" name="Nama Lengkap" required placeholder="Masukkan nama lengkap">
+          </div>
+          <div class="form-group">
+            <label>NISN</label>
+            <input type="text" name="NISN" placeholder="Nomor Induk Siswa Nasional">
+          </div>
+          <div class="form-group">
+            <label>No. WhatsApp *</label>
+            <input type="tel" name="No WhatsApp" required placeholder="08xxxxxxxxxx">
+          </div>
+          <div class="form-group form-full">
+            <label>Asal Sekolah</label>
+            <input type="text" name="Asal Sekolah" placeholder="Nama SMP/MTs">
+          </div>
+          <div class="form-group form-full">
+            <label>Pilihan Jurusan *</label>
+            <select name="Jurusan Pilihan" required>
+              <option value="">-- Pilih Jurusan --</option>
+              <option value="Kriya Kreatif Kayu dan Rotan">Kriya Kreatif Kayu dan Rotan</option>
+              <option value="Kriya Kreatif Batik dan Tekstil">Kriya Kreatif Batik dan Tekstil</option>
+              <option value="Multimedia / DKV">Multimedia / Desain Komunikasi Visual</option>
+              <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan (TJKT)</option>
+            </select>
+          </div>
+          <div class="form-group form-full">
+            <label>Pesan / Keterangan</label>
+            <textarea name="Pesan" rows="3" placeholder="Tulis pesan tambahan (opsional)"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
+        <p class="form-note">Data akan langsung dikirim ke email admin.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="img/logo.png" alt="Logo">
+            <div><div class="title">SMK Kriya Sahid</div><div class="sub">Sukoharjo</div></div>
+          </div>
+          <p class="footer-desc">Sekolah Seni Berbasis Teknologi. Mencetak generasi terampil dan berkarakter.</p>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul class="footer-list">
+            <li>Jl. Veteran No. 82B, Jetis, Sukoharjo</li>
+            <li>0271-590483</li>
+            <li>smkkriyasahidsukoharjo@gmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tautan Cepat</h4>
+          <ul class="footer-list">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#jurusan">Jurusan</a></li>
+            <li><a href="#prestasi">Prestasi</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#daftar">Pendaftaran</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        COPYRIGHT © 2026 DEVELOPMENT BY ARGA<br>
+        SMK Kriya Sahid Sukoharjo — Sekolah Seni Berbasis Teknologi
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/6281234567890?text=Halo%20SMK%20Kriya%20Sahid%2C%20saya%20ingin%20bertanya%20tentang%20pendaftaran." class="wa-float" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Kembali ke atas">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <img id="lightboxImg" src="" alt="Preview">
+  </div>
+
+  <!-- MODAL JURUSAN -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta" id="mobileCta">
+    <a href="#daftar">Daftar Sekarang — Kuota Terbatas</a>
+  </div>
+
+  
+  <!-- AUTH MODAL -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal" style="max-width:420px;">
+      <button class="modal-close" id="authModalClose">&times;</button>
+      <div style="display:flex;gap:0.5rem;margin-bottom:1.25rem;">
+        <button type="button" id="tabLogin" class="btn-submit" style="margin:0;padding:0.6rem;font-size:0.9rem;">Login</button>
+        <button type="button" id="tabRegister" class="btn-submit" style="margin:0;padding:0.6rem;font-size:0.9rem;background:var(--border);color:var(--text);">Daftar</button>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group form-full" style="margin-bottom:0.85rem;">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="email@contoh.com">
+        </div>
+        <div class="form-group form-full" style="margin-bottom:0.85rem;">
+          <label>Password</label>
+          <input type="password" name="password" required placeholder="Minimal 6 karakter">
+        </div>
+        <p id="loginError" style="color:#dc2626;font-size:0.85rem;margin-bottom:0.75rem;display:none;"></p>
+        <button type="submit" class="btn-submit">Masuk</button>
+      </form>
+
+      <form id="registerForm" style="display:none;">
+        <div class="form-group form-full" style="margin-bottom:0.85rem;">
+          <label>Nama Lengkap</label>
+          <input type="text" name="nama" required placeholder="Nama kamu">
+        </div>
+        <div class="form-group form-full" style="margin-bottom:0.85rem;">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="email@contoh.com">
+        </div>
+        <div class="form-group form-full" style="margin-bottom:0.85rem;">
+          <label>Password</label>
+          <input type="password" name="password" required minlength="6" placeholder="Minimal 6 karakter">
+        </div>
+        <p id="registerError" style="color:#dc2626;font-size:0.85rem;margin-bottom:0.75rem;display:none;"></p>
+        <button type="submit" class="btn-submit">Buat Akun</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
